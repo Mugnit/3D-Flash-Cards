@@ -11,6 +11,7 @@
 		31EAB032213256EA005CCCDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31EAB030213256EA005CCCDD /* Main.storyboard */; };
 		31EAB034213256EA005CCCDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31EAB033213256EA005CCCDD /* Assets.xcassets */; };
 		31EAB037213256EA005CCCDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31EAB035213256EA005CCCDD /* LaunchScreen.storyboard */; };
+		4EAEEEE6C6895E749F001D40 /* Pods_3D_Flash_Cards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7AEE9EA286B47DA939B069 /* Pods_3D_Flash_Cards.framework */; };
 		DC24DD0A213458440039CB92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24DD09213458440039CB92 /* ViewController.swift */; };
 		DC24DD0C21345CB00039CB92 /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24DD0B21345CB00039CB92 /* InputController.swift */; };
 		DC24DD0E21345D3F0039CB92 /* DetailInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24DD0D21345D3F0039CB92 /* DetailInputController.swift */; };
@@ -25,6 +26,9 @@
 		31EAB033213256EA005CCCDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31EAB036213256EA005CCCDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31EAB038213256EA005CCCDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A7AEE9EA286B47DA939B069 /* Pods_3D_Flash_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_3D_Flash_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89408A07D51514F8F5ABFA35 /* Pods-3D Flash Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3D Flash Cards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-3D Flash Cards/Pods-3D Flash Cards.debug.xcconfig"; sourceTree = "<group>"; };
+		B6C69E792BA1AEF323339BA8 /* Pods-3D Flash Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3D Flash Cards.release.xcconfig"; path = "Pods/Target Support Files/Pods-3D Flash Cards/Pods-3D Flash Cards.release.xcconfig"; sourceTree = "<group>"; };
 		DC24DD09213458440039CB92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC24DD0B21345CB00039CB92 /* InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
 		DC24DD0D21345D3F0039CB92 /* DetailInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInputController.swift; sourceTree = "<group>"; };
@@ -37,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EAEEEE6C6895E749F001D40 /* Pods_3D_Flash_Cards.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		126B30879F2CBD1CE0B3458C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A7AEE9EA286B47DA939B069 /* Pods_3D_Flash_Cards.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		31EAB020213256EA005CCCDD = {
 			isa = PBXGroup;
 			children = (
 				31EAB02B213256EA005CCCDD /* 3D Flash Cards */,
 				31EAB02A213256EA005CCCDD /* Products */,
+				A46E5A0A6D83A6295506676A /* Pods */,
+				126B30879F2CBD1CE0B3458C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +91,15 @@
 			path = "3D Flash Cards";
 			sourceTree = "<group>";
 		};
+		A46E5A0A6D83A6295506676A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89408A07D51514F8F5ABFA35 /* Pods-3D Flash Cards.debug.xcconfig */,
+				B6C69E792BA1AEF323339BA8 /* Pods-3D Flash Cards.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31EAB03B213256EA005CCCDD /* Build configuration list for PBXNativeTarget "3D Flash Cards" */;
 			buildPhases = (
+				450986AB36B895296D95B650 /* [CP] Check Pods Manifest.lock */,
 				31EAB025213256EA005CCCDD /* Sources */,
 				31EAB026213256EA005CCCDD /* Frameworks */,
 				31EAB027213256EA005CCCDD /* Resources */,
+				9A127B9CAB701D37A14838E0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +168,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		450986AB36B895296D95B650 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-3D Flash Cards-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A127B9CAB701D37A14838E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-3D Flash Cards/Pods-3D Flash Cards-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-3D Flash Cards/Pods-3D Flash Cards-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		31EAB025213256EA005CCCDD /* Sources */ = {
@@ -288,6 +363,7 @@
 		};
 		31EAB03C213256EA005CCCDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89408A07D51514F8F5ABFA35 /* Pods-3D Flash Cards.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +380,7 @@
 		};
 		31EAB03D213256EA005CCCDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6C69E792BA1AEF323339BA8 /* Pods-3D Flash Cards.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
