@@ -157,6 +157,7 @@
                         <outlet property="inputEnglish" destination="h1f-Sp-0g0" id="OzR-uL-rAn"/>
                         <outlet property="inputJapanese" destination="Ri5-b7-4q7" id="Nja-t8-bGL"/>
                         <outlet property="inputOtherLanguage" destination="GJx-Sp-QvW" id="Zfb-e8-zo6"/>
+                        <outlet property="titleLabel" destination="9ze-f5-7VM" id="XdH-wY-oAD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6yo-Le-VTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -281,6 +282,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="cyR-jy-GYw"/>
                         <barButtonItem title="単語帳を開く" style="done" id="QnF-Sh-bZq">
                             <connections>
+                                <action selector="openInputWord:" destination="jov-yb-KTt" id="PMF-dd-kMw"/>
                                 <segue destination="5rH-Qu-Qo6" kind="show" id="EqG-hB-QbQ"/>
                             </connections>
                         </barButtonItem>
