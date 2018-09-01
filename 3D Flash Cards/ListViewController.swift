@@ -15,10 +15,23 @@ class ListViewController: UITableViewController {
         alert.addTextField(configurationHandler: { (textField:UITextField) -> Void in
             textField.placeholder = "ここにタイトルを入力"
         })
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: {
-            (action:UIAlertAction!) -> Void in
-        }
-        alert.addAction(okAction)
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
+            // ボタンが押された時の処理を書く（クロージャ実装）
+            (action: UIAlertAction!) -> Void in
+            print("OK")
+        })
+        // キャンセルボタン
+        let cancelAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler:{
+            // ボタンが押された時の処理を書く（クロージャ実装）
+            (action: UIAlertAction!) -> Void in
+            print("Cancel")
+        })
+        
+        // ③ UIAlertControllerにActionを追加
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
+
+       
         
         self.present(alert, animated: true, completion: nil)
     }

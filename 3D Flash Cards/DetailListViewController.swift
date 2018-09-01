@@ -16,6 +16,11 @@ class DetailListViewController:UITableViewController {
         tableView.reloadData()
         self.tableView.reloadData()
     }
+    @IBAction func openInputWord(_ sender: Any) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let second = storyboard?.instantiateViewController(withIdentifier: "DetailInputController")
+        self.present(second!, animated: true, completion: nil)
+    }
     
     
 }
