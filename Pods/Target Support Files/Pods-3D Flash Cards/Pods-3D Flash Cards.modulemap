@@ -1,0 +1,6 @@
+framework module Pods_3D_Flash_Cards {
+  umbrella header "Pods-3D Flash Cards-umbrella.h"
+
+  export *
+  module * { export * }
+}
