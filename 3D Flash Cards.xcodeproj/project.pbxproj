@@ -11,12 +11,17 @@
 		31EAB032213256EA005CCCDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31EAB030213256EA005CCCDD /* Main.storyboard */; };
 		31EAB034213256EA005CCCDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31EAB033213256EA005CCCDD /* Assets.xcassets */; };
 		31EAB037213256EA005CCCDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31EAB035213256EA005CCCDD /* LaunchScreen.storyboard */; };
+		44911AD8213C2DE40052031F /* NoteListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44911AD7213C2DE40052031F /* NoteListView.storyboard */; };
+		44911ADA213C2E170052031F /* WordInput.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44911AD9213C2E170052031F /* WordInput.storyboard */; };
+		44911ADC213C2E240052031F /* NoteInput.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44911ADB213C2E240052031F /* NoteInput.storyboard */; };
+		44911ADE213C2E700052031F /* WordView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44911ADD213C2E700052031F /* WordView.storyboard */; };
+		44911AE0213C2E960052031F /* WordListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44911ADF213C2E960052031F /* WordListView.storyboard */; };
 		4EAEEEE6C6895E749F001D40 /* Pods_3D_Flash_Cards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7AEE9EA286B47DA939B069 /* Pods_3D_Flash_Cards.framework */; };
-		DC24DD0A213458440039CB92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24DD09213458440039CB92 /* ViewController.swift */; };
-		DC24DD0C21345CB00039CB92 /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24DD0B21345CB00039CB92 /* InputController.swift */; };
-		DC24DD0E21345D3F0039CB92 /* DetailInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24DD0D21345D3F0039CB92 /* DetailInputController.swift */; };
-		DCE146D32133EAF900CA6285 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE146D22133EAF900CA6285 /* ListViewController.swift */; };
-		DCE146D52133EF4D00CA6285 /* DetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE146D42133EF4D00CA6285 /* DetailListViewController.swift */; };
+		DC24DD0A213458440039CB92 /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24DD09213458440039CB92 /* WordViewController.swift */; };
+		DC24DD0C21345CB00039CB92 /* NoteInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24DD0B21345CB00039CB92 /* NoteInputController.swift */; };
+		DC24DD0E21345D3F0039CB92 /* WordInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24DD0D21345D3F0039CB92 /* WordInputController.swift */; };
+		DCE146D32133EAF900CA6285 /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE146D22133EAF900CA6285 /* NoteListViewController.swift */; };
+		DCE146D52133EF4D00CA6285 /* WordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE146D42133EF4D00CA6285 /* WordListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,14 +31,19 @@
 		31EAB033213256EA005CCCDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31EAB036213256EA005CCCDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31EAB038213256EA005CCCDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44911AD7213C2DE40052031F /* NoteListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoteListView.storyboard; sourceTree = "<group>"; };
+		44911AD9213C2E170052031F /* WordInput.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WordInput.storyboard; sourceTree = "<group>"; };
+		44911ADB213C2E240052031F /* NoteInput.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoteInput.storyboard; sourceTree = "<group>"; };
+		44911ADD213C2E700052031F /* WordView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WordView.storyboard; sourceTree = "<group>"; };
+		44911ADF213C2E960052031F /* WordListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WordListView.storyboard; sourceTree = "<group>"; };
 		4A7AEE9EA286B47DA939B069 /* Pods_3D_Flash_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_3D_Flash_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89408A07D51514F8F5ABFA35 /* Pods-3D Flash Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3D Flash Cards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-3D Flash Cards/Pods-3D Flash Cards.debug.xcconfig"; sourceTree = "<group>"; };
 		B6C69E792BA1AEF323339BA8 /* Pods-3D Flash Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3D Flash Cards.release.xcconfig"; path = "Pods/Target Support Files/Pods-3D Flash Cards/Pods-3D Flash Cards.release.xcconfig"; sourceTree = "<group>"; };
-		DC24DD09213458440039CB92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DC24DD0B21345CB00039CB92 /* InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
-		DC24DD0D21345D3F0039CB92 /* DetailInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInputController.swift; sourceTree = "<group>"; };
-		DCE146D22133EAF900CA6285 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		DCE146D42133EF4D00CA6285 /* DetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListViewController.swift; sourceTree = "<group>"; };
+		DC24DD09213458440039CB92 /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
+		DC24DD0B21345CB00039CB92 /* NoteInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteInputController.swift; sourceTree = "<group>"; };
+		DC24DD0D21345D3F0039CB92 /* WordInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordInputController.swift; sourceTree = "<group>"; };
+		DCE146D22133EAF900CA6285 /* NoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
+		DCE146D42133EF4D00CA6285 /* WordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,16 +89,45 @@
 			children = (
 				31EAB02C213256EA005CCCDD /* AppDelegate.swift */,
 				31EAB030213256EA005CCCDD /* Main.storyboard */,
-				DC24DD0D21345D3F0039CB92 /* DetailInputController.swift */,
-				DC24DD0B21345CB00039CB92 /* InputController.swift */,
-				DC24DD09213458440039CB92 /* ViewController.swift */,
-				DCE146D42133EF4D00CA6285 /* DetailListViewController.swift */,
-				DCE146D22133EAF900CA6285 /* ListViewController.swift */,
+				44BD7F09213C3480008F19EC /* Note */,
+				44BD7F0A213C34B1008F19EC /* Word */,
+				44BD7F0B213C34C5008F19EC /* WordView */,
 				31EAB033213256EA005CCCDD /* Assets.xcassets */,
 				31EAB035213256EA005CCCDD /* LaunchScreen.storyboard */,
 				31EAB038213256EA005CCCDD /* Info.plist */,
 			);
 			path = "3D Flash Cards";
+			sourceTree = "<group>";
+		};
+		44BD7F09213C3480008F19EC /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				DC24DD0B21345CB00039CB92 /* NoteInputController.swift */,
+				44911ADB213C2E240052031F /* NoteInput.storyboard */,
+				DCE146D22133EAF900CA6285 /* NoteListViewController.swift */,
+				44911AD7213C2DE40052031F /* NoteListView.storyboard */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		44BD7F0A213C34B1008F19EC /* Word */ = {
+			isa = PBXGroup;
+			children = (
+				44911AD9213C2E170052031F /* WordInput.storyboard */,
+				DC24DD0D21345D3F0039CB92 /* WordInputController.swift */,
+				44911ADF213C2E960052031F /* WordListView.storyboard */,
+				DCE146D42133EF4D00CA6285 /* WordListViewController.swift */,
+			);
+			path = Word;
+			sourceTree = "<group>";
+		};
+		44BD7F0B213C34C5008F19EC /* WordView */ = {
+			isa = PBXGroup;
+			children = (
+				44911ADD213C2E700052031F /* WordView.storyboard */,
+				DC24DD09213458440039CB92 /* WordViewController.swift */,
+			);
+			path = WordView;
 			sourceTree = "<group>";
 		};
 		A46E5A0A6D83A6295506676A /* Pods */ = {
@@ -162,6 +201,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				31EAB037213256EA005CCCDD /* LaunchScreen.storyboard in Resources */,
+				44911ADE213C2E700052031F /* WordView.storyboard in Resources */,
+				44911AE0213C2E960052031F /* WordListView.storyboard in Resources */,
+				44911ADC213C2E240052031F /* NoteInput.storyboard in Resources */,
+				44911ADA213C2E170052031F /* WordInput.storyboard in Resources */,
+				44911AD8213C2DE40052031F /* NoteListView.storyboard in Resources */,
 				31EAB034213256EA005CCCDD /* Assets.xcassets in Resources */,
 				31EAB032213256EA005CCCDD /* Main.storyboard in Resources */,
 			);
@@ -175,15 +219,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-3D Flash Cards-checkManifestLockResult.txt",
 			);
@@ -197,16 +237,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-3D Flash Cards/Pods-3D Flash Cards-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -223,11 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCE146D32133EAF900CA6285 /* ListViewController.swift in Sources */,
-				DC24DD0E21345D3F0039CB92 /* DetailInputController.swift in Sources */,
-				DCE146D52133EF4D00CA6285 /* DetailListViewController.swift in Sources */,
-				DC24DD0A213458440039CB92 /* ViewController.swift in Sources */,
-				DC24DD0C21345CB00039CB92 /* InputController.swift in Sources */,
+				DCE146D32133EAF900CA6285 /* NoteListViewController.swift in Sources */,
+				DC24DD0E21345D3F0039CB92 /* WordInputController.swift in Sources */,
+				DCE146D52133EF4D00CA6285 /* WordListViewController.swift in Sources */,
+				DC24DD0A213458440039CB92 /* WordViewController.swift in Sources */,
+				DC24DD0C21345CB00039CB92 /* NoteInputController.swift in Sources */,
 				31EAB02D213256EA005CCCDD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
