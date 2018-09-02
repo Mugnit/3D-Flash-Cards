@@ -68,7 +68,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日本語" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmd-cE-fL5">
                                 <rect key="frame" x="62" y="233" width="79" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="79" id="9cs-Kp-rfe"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="79" id="9cs-Kp-rfe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
