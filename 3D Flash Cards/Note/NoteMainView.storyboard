@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uU1-2l-IUO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Note Main View Controller-->
+        <scene sceneID="kx1-Fn-rRc">
+            <objects>
+                <viewController id="uU1-2l-IUO" customClass="NoteMainViewController" customModule="_D_Flash_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="exS-OE-8bs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnx-Fl-wlG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.55294117649999996" green="0.81176470590000005" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem id="NPE-hn-C2e">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="IFt-qu-kVh">
+                                            <connections>
+                                                <action selector="backButton:" destination="uU1-2l-IUO" id="OqX-Mb-QRe"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.55294117649999996" green="0.81176470590000005" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vnx-Fl-wlG" firstAttribute="top" secondItem="Evy-pV-fIo" secondAttribute="top" id="Bcb-mx-tl7"/>
+                            <constraint firstAttribute="trailing" secondItem="vnx-Fl-wlG" secondAttribute="trailing" id="OMV-LH-ala"/>
+                            <constraint firstItem="vnx-Fl-wlG" firstAttribute="leading" secondItem="exS-OE-8bs" secondAttribute="leading" id="heJ-5s-Nxu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Evy-pV-fIo"/>
+                    </view>
+                    <connections>
+                        <outlet property="wordListlabel" destination="NPE-hn-C2e" id="9kp-1f-AKQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kal-eS-xAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229.59999999999999" y="71.514242878560722"/>
+        </scene>
+    </scenes>
+</document>

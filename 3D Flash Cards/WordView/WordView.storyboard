@@ -1,57 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="osf-fo-osc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="NF4-Y1-Gxs">
+        <!--Word View Controller-->
+        <scene sceneID="Z01-VE-YSN">
             <objects>
-                <viewController id="osf-fo-osc" customClass="ViewController" customModule="_D_Flash_Cards" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wAb-hM-WTC">
+                <viewController id="yHy-om-vpc" customClass="WordViewController" customModule="_D_Flash_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oc5-ET-FAa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="du8-F3-haJ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="changeWord:" destination="osf-fo-osc" eventType="touchUpInside" id="wJF-SV-DN0"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="単語" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ok0-5P-UiD">
-                                <rect key="frame" x="155" y="244" width="63" height="179"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="du8-F3-haJ" firstAttribute="centerY" secondItem="Ok0-5P-UiD" secondAttribute="centerY" id="Ejp-K9-kUa"/>
-                            <constraint firstItem="Ok0-5P-UiD" firstAttribute="top" secondItem="3cT-tQ-cCP" secondAttribute="top" constant="224" id="Osr-pj-kNn"/>
-                            <constraint firstAttribute="bottom" secondItem="du8-F3-haJ" secondAttribute="bottom" id="YQ5-Dh-rrF"/>
-                            <constraint firstItem="du8-F3-haJ" firstAttribute="leading" secondItem="wAb-hM-WTC" secondAttribute="leading" id="aA2-xH-oFu"/>
-                            <constraint firstItem="du8-F3-haJ" firstAttribute="top" secondItem="wAb-hM-WTC" secondAttribute="top" id="dQ1-bC-2rK"/>
-                            <constraint firstAttribute="trailing" secondItem="du8-F3-haJ" secondAttribute="trailing" id="tvZ-bC-FTv"/>
-                            <constraint firstItem="3cT-tQ-cCP" firstAttribute="trailing" secondItem="Ok0-5P-UiD" secondAttribute="trailing" constant="157" id="vuI-dS-w5z"/>
-                            <constraint firstItem="Ok0-5P-UiD" firstAttribute="leading" secondItem="3cT-tQ-cCP" secondAttribute="leading" constant="155" id="xmG-w5-uPS"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="3cT-tQ-cCP"/>
+                        <viewLayoutGuide key="safeArea" id="qIG-Q3-f8o"/>
                     </view>
-                    <connections>
-                        <outlet property="label" destination="Ok0-5P-UiD" id="nAL-Sl-FDG"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dgh-yr-DyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w8e-hh-MNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2544.8000000000002" y="105.69715142428787"/>
+            <point key="canvasLocation" x="680" y="79"/>
         </scene>
     </scenes>
 </document>

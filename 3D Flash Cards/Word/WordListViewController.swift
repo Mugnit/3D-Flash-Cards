@@ -1,26 +1,30 @@
 //
-//  DetailListViewController.swift
+//  WordListViewController.swift
 //  3D Flash Cards
 //
-//  Created by 和泉淳喜 on 2018/08/27.
+//  Created by mat4645 on 2018/10/08.
 //  Copyright © 2018年 Mugnit. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
+class WordListViewController: UIViewController {
 
-class DetailListViewController:UITableViewController {
-    override func viewWillAppear(_ animated: Bool) {
-          super.viewWillAppear(animated)
-        tableView.reloadData()
-        self.tableView.reloadData()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
-//    @IBAction func openInputWord(_ sender: Any) {
-//        let storyboard: UIStoryboard = self.storyboard!
-//        let second = storyboard?.instantiateViewController(withIdentifier: "DetailInputController")
-//        self.present(second!, animated: true, completion: nil)
-//    }
     
-    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
