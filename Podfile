@@ -4,7 +4,7 @@ platform :ios, '9.0'
 target '3D Flash Cards' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'RealmSwift', '3.7.5'
+  pod 'RealmSwift', '3.11.0'
 
   # Pods for 3D Flash Cards
 

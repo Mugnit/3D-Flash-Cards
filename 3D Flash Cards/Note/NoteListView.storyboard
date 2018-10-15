@@ -1,68 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LNg-3f-Rna">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7wI-Wd-hWj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment version="4400" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--一覧-->
-        <scene sceneID="os2-Te-C49">
+        <!--NoteListViewController-->
+        <scene sceneID="xMu-Ah-V58">
             <objects>
-                <tableViewController id="LNg-3f-Rna" customClass="ListViewController" customModule="_D_Flash_Cards" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ruP-dr-uwH">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="7wI-Wd-hWj" userLabel="NoteListViewController" customClass="NoteListViewController" customModule="_D_Flash_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pSr-oM-aki">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="VuP-LV-gwD" style="IBUITableViewCellStyleDefault" id="6qJ-qc-2eB">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6qJ-qc-2eB" id="Z1I-W0-SuX">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="タイトルなし" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VuP-LV-gwD">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVv-j4-ryh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.55294117649999996" green="0.81176470590000005" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="単語帳一覧" id="2wE-QN-jvj">
+                                        <barButtonItem key="leftBarButtonItem" title="編集" style="done" id="2AO-OM-YPn">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="tapEditWL:" destination="7wI-Wd-hWj" id="0ph-ly-ouK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9EK-pq-cPf" userLabel="WordListTableView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" text="" id="DBf-0q-glw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordListNameCell" id="B3q-pF-BEt">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B3q-pF-BEt" id="xno-Hp-bSO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="86I-vO-T2o" kind="showDetail" identifier="WLnext" id="lmE-2i-Nt7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <segue destination="WmP-OV-BoJ" kind="show" id="LVd-yC-3k4"/>
+                                    <outlet property="dataSource" destination="7wI-Wd-hWj" id="hgg-vG-JPn"/>
+                                    <outlet property="delegate" destination="7wI-Wd-hWj" id="ZP1-vk-3SR"/>
                                 </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="LNg-3f-Rna" id="lxD-Q5-i7m"/>
-                            <outlet property="delegate" destination="LNg-3f-Rna" id="wOU-uw-i3R"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="一覧" id="reY-tI-YDy">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="1Ez-Ls-7Xg">
-                            <connections>
-                                <action selector="alertButton:" destination="LNg-3f-Rna" id="I5Y-Fg-tDN"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rrX-yg-5wc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdG-Ye-KeB">
+                                <rect key="frame" x="126" y="608" width="123" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Fjd-Le-0Am"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="単語帳を追加">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addList:" destination="7wI-Wd-hWj" eventType="touchUpInside" id="MUY-Wp-9jm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.55294117649999996" green="0.81176470590000005" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fVv-j4-ryh" firstAttribute="top" secondItem="knz-gM-SqU" secondAttribute="top" id="DzO-P4-CYb"/>
+                            <constraint firstItem="fVv-j4-ryh" firstAttribute="trailing" secondItem="9EK-pq-cPf" secondAttribute="trailing" id="Jbj-mJ-yjL"/>
+                            <constraint firstItem="fVv-j4-ryh" firstAttribute="leading" secondItem="9EK-pq-cPf" secondAttribute="leading" id="TU8-vR-9G1"/>
+                            <constraint firstItem="KdG-Ye-KeB" firstAttribute="top" secondItem="9EK-pq-cPf" secondAttribute="bottom" constant="8" symbolic="YES" id="XMj-G2-Duq"/>
+                            <constraint firstAttribute="bottom" secondItem="KdG-Ye-KeB" secondAttribute="bottom" constant="20" symbolic="YES" id="Xfk-Un-5uP"/>
+                            <constraint firstItem="fVv-j4-ryh" firstAttribute="leading" secondItem="pSr-oM-aki" secondAttribute="leading" id="iNj-Up-YlY"/>
+                            <constraint firstItem="9EK-pq-cPf" firstAttribute="centerX" secondItem="KdG-Ye-KeB" secondAttribute="centerX" id="kSD-l5-w4O"/>
+                            <constraint firstAttribute="trailing" secondItem="fVv-j4-ryh" secondAttribute="trailing" id="s3O-nn-m0f"/>
+                            <constraint firstItem="9EK-pq-cPf" firstAttribute="top" secondItem="fVv-j4-ryh" secondAttribute="bottom" id="sug-tR-LEC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="knz-gM-SqU"/>
+                    </view>
+                    <connections>
+                        <outlet property="editWL" destination="2AO-OM-YPn" id="5gw-p0-kCo"/>
+                        <outlet property="searchBarWL" destination="DBf-0q-glw" id="oDT-xp-nin"/>
+                        <outlet property="wLTableView" destination="9EK-pq-cPf" id="FFa-c3-wuO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lrA-um-7p4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1482" y="112"/>
+            <point key="canvasLocation" x="-390" y="-43"/>
         </scene>
-        <!--WordListView-->
-        <scene sceneID="KEK-SV-LVU">
+        <!--NoteMainView-->
+        <scene sceneID="vxa-4M-FmQ">
             <objects>
-                <viewControllerPlaceholder storyboardName="WordListView" id="WmP-OV-BoJ" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dbw-t4-hxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VOV-Ce-wka" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="NoteMainView" id="86I-vO-T2o" sceneMemberID="viewController"/>
             </objects>
-            <point key="canvasLocation" x="1883" y="111"/>
+            <point key="canvasLocation" x="210" y="-44"/>
         </scene>
     </scenes>
 </document>
