@@ -1,29 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cfc-ZU-1Qh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Word Edit View Controller-->
+        <!--WordEditViewController-->
         <scene sceneID="JNz-f9-PPJ">
             <objects>
-                <viewController id="cfc-ZU-1Qh" customClass="WordEditViewController" customModule="_D_Flash_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="WordEditViewController" id="cfc-ZU-1Qh" customClass="WordEditViewController" customModule="_D_Flash_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KvJ-g6-hNK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yte-PY-dH1">
+                                <rect key="frame" x="0.0" y="40" width="375" height="44"/>
+                                <color key="barTintColor" red="0.55294117649999996" green="0.81176470590000005" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem id="7re-JA-ygF">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="Law-Om-qQr">
+                                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <connections>
+                                                <action selector="backNMVbutton:" destination="cfc-ZU-1Qh" id="nZJ-yy-31r"/>
+                                                <segue destination="tXJ-C1-D0U" kind="show" id="8HO-qb-7Uo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem title="③" style="plain" id="Hd0-6W-Y3U">
+                                                <connections>
+                                                    <action selector="ChangeThirdWordButton:" destination="cfc-ZU-1Qh" id="VKy-BL-50f"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="②" style="plain" id="MYt-Zd-xko">
+                                                <connections>
+                                                    <action selector="ChangeSecondWordButton:" destination="cfc-ZU-1Qh" id="olQ-SX-10a"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="①" style="plain" id="szf-SN-nHD">
+                                                <connections>
+                                                    <action selector="ChangeFirstWordButton:" destination="cfc-ZU-1Qh" id="gn5-0O-jxC"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PLr-6h-K7R">
+                                <rect key="frame" x="0.0" y="84" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9q-YL-KNc">
+                                <rect key="frame" x="120" y="160" width="135" height="30"/>
+                                <state key="normal" title="単語追加"/>
+                                <connections>
+                                    <segue destination="CNO-es-hpB" kind="show" id="2Qa-gN-hIY"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vpp-LA-5FL">
+                                <rect key="frame" x="0.0" y="198" width="375" height="469"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordListCell" id="KYv-Op-8t3">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KYv-Op-8t3" id="xGd-0f-izu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cfc-ZU-1Qh" id="ODO-PC-bXs"/>
+                                    <outlet property="delegate" destination="cfc-ZU-1Qh" id="al6-WF-aFe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.55294117649999996" green="0.81176470590000005" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PLr-6h-K7R" firstAttribute="top" secondItem="Yte-PY-dH1" secondAttribute="bottom" id="7hW-OV-yQE"/>
+                            <constraint firstItem="Yte-PY-dH1" firstAttribute="centerX" secondItem="Y9q-YL-KNc" secondAttribute="centerX" id="8ft-4s-qK6"/>
+                            <constraint firstItem="Vpp-LA-5FL" firstAttribute="top" secondItem="Y9q-YL-KNc" secondAttribute="bottom" constant="8" symbolic="YES" id="9n3-6R-xZS"/>
+                            <constraint firstItem="M7U-Fh-8nc" firstAttribute="trailing" secondItem="Y9q-YL-KNc" secondAttribute="trailing" constant="120" id="Es6-TT-wp2"/>
+                            <constraint firstItem="Y9q-YL-KNc" firstAttribute="top" secondItem="PLr-6h-K7R" secondAttribute="bottom" constant="20" id="GzS-zB-AD9"/>
+                            <constraint firstItem="Yte-PY-dH1" firstAttribute="top" secondItem="M7U-Fh-8nc" secondAttribute="top" constant="20" id="Htr-6j-zHR"/>
+                            <constraint firstItem="Vpp-LA-5FL" firstAttribute="leading" secondItem="PLr-6h-K7R" secondAttribute="leading" id="Lw6-1T-ZKL"/>
+                            <constraint firstItem="Y9q-YL-KNc" firstAttribute="leading" secondItem="M7U-Fh-8nc" secondAttribute="leading" constant="120" id="O0a-Vo-98s"/>
+                            <constraint firstItem="PLr-6h-K7R" firstAttribute="leading" secondItem="Yte-PY-dH1" secondAttribute="leading" id="Tu3-Xp-T96"/>
+                            <constraint firstItem="Vpp-LA-5FL" firstAttribute="trailing" secondItem="PLr-6h-K7R" secondAttribute="trailing" id="b6Q-k3-6KN"/>
+                            <constraint firstItem="PLr-6h-K7R" firstAttribute="trailing" secondItem="Yte-PY-dH1" secondAttribute="trailing" id="eoq-ug-ZiP"/>
+                            <constraint firstAttribute="trailing" secondItem="Yte-PY-dH1" secondAttribute="trailing" id="ibm-nx-XDT"/>
+                            <constraint firstItem="Vpp-LA-5FL" firstAttribute="bottom" secondItem="M7U-Fh-8nc" secondAttribute="bottom" id="trY-NE-arK"/>
+                            <constraint firstItem="Yte-PY-dH1" firstAttribute="leading" secondItem="KvJ-g6-hNK" secondAttribute="leading" id="zPX-Vp-MBP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="M7U-Fh-8nc"/>
                     </view>
+                    <connections>
+                        <outlet property="SWEDbar" destination="PLr-6h-K7R" id="97f-Wb-oPb"/>
+                        <outlet property="WEVCNavigatiion" destination="7re-JA-ygF" id="yqZ-S9-uUp"/>
+                        <outlet property="WordEditTableView" destination="Vpp-LA-5FL" id="9gv-XY-Ddf"/>
+                        <outlet property="goWVbutton" destination="Y9q-YL-KNc" id="B0H-J5-0bA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tHT-wd-Im9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="111" y="156"/>
+            <point key="canvasLocation" x="-44" y="152.47376311844079"/>
+        </scene>
+        <!--NoteMainView-->
+        <scene sceneID="qht-Nn-l5e">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NoteMainView" id="tXJ-C1-D0U" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t9l-MK-w8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="549" y="-50"/>
+        </scene>
+        <!--WordAddView-->
+        <scene sceneID="vLb-rp-TVu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WordAddView" id="CNO-es-hpB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cd5-pR-xVy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="561" y="33"/>
         </scene>
     </scenes>
 </document>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "3D Flash Cards/Word/WordEditViewController.swift"
+            timestampString = "562840635.6235681"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "WordEditViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_D_Flash_Cards.WordEditViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; _D_Flash_Cards.WordEditViewController"
+                  moduleName = "3D Flash Cards"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/izumiatsuki/Desktop/Mugnit_app/3D-Flash-Cards/3D%20Flash%20Cards/Word/WordEditViewController.swift"
+                  timestampString = "561975692.745147"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "83">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_D_Flash_Cards.WordEditViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;_D_Flash_Cards.WordEditViewController&gt;"
+                  moduleName = "3D Flash Cards"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/izumiatsuki/Desktop/Mugnit_app/3D-Flash-Cards/3D%20Flash%20Cards/Word/WordEditViewController.swift"
+                  timestampString = "561975692.748064"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "54">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "3D Flash Cards/Note/NoteMainViewController.swift"
+            timestampString = "562840635.624064"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

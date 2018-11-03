@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uU1-2l-IUO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uU1-2l-IUO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,27 +33,80 @@
                                         <barButtonItem key="leftBarButtonItem" title="戻る" id="IFt-qu-kVh">
                                             <connections>
                                                 <action selector="backButton:" destination="uU1-2l-IUO" id="OqX-Mb-QRe"/>
+                                                <segue destination="a7e-KW-vvh" kind="show" id="LpF-By-aSW"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdJ-aE-xOv">
+                                <rect key="frame" x="0.0" y="527" width="375" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="9ap-Po-HBn"/>
+                                </constraints>
+                                <state key="normal" title="スタート"/>
+                                <connections>
+                                    <segue destination="2td-zY-chA" kind="show" identifier="ToWVsegue" id="rkb-fi-O94"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z54-7g-05u">
+                                <rect key="frame" x="0.0" y="379" width="375" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="TtX-t6-E8p"/>
+                                </constraints>
+                                <state key="normal" title="編集"/>
+                                <connections>
+                                    <segue destination="rXp-xS-ClC" kind="show" identifier="ToWEVSegue" id="6nq-u5-qCg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.55294117649999996" green="0.81176470590000005" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="UdJ-aE-xOv" firstAttribute="top" secondItem="z54-7g-05u" secondAttribute="bottom" constant="8" symbolic="YES" id="6QX-iw-MBC"/>
                             <constraint firstItem="vnx-Fl-wlG" firstAttribute="top" secondItem="Evy-pV-fIo" secondAttribute="top" id="Bcb-mx-tl7"/>
+                            <constraint firstItem="UdJ-aE-xOv" firstAttribute="bottom" secondItem="Evy-pV-fIo" secondAttribute="bottom" id="Dmj-Ox-kVm"/>
+                            <constraint firstItem="z54-7g-05u" firstAttribute="leading" secondItem="UdJ-aE-xOv" secondAttribute="leading" id="H6A-jd-RGa"/>
                             <constraint firstAttribute="trailing" secondItem="vnx-Fl-wlG" secondAttribute="trailing" id="OMV-LH-ala"/>
+                            <constraint firstItem="UdJ-aE-xOv" firstAttribute="trailing" secondItem="vnx-Fl-wlG" secondAttribute="trailing" id="X9f-vW-iY2"/>
                             <constraint firstItem="vnx-Fl-wlG" firstAttribute="leading" secondItem="exS-OE-8bs" secondAttribute="leading" id="heJ-5s-Nxu"/>
+                            <constraint firstItem="z54-7g-05u" firstAttribute="trailing" secondItem="UdJ-aE-xOv" secondAttribute="trailing" id="kdf-ye-xht"/>
+                            <constraint firstItem="UdJ-aE-xOv" firstAttribute="leading" secondItem="vnx-Fl-wlG" secondAttribute="leading" id="mfq-qM-aIU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Evy-pV-fIo"/>
                     </view>
                     <connections>
+                        <outlet property="goeditbutton" destination="z54-7g-05u" id="b5K-AW-Pxu"/>
+                        <outlet property="startbutton" destination="UdJ-aE-xOv" id="R8P-lT-a3I"/>
                         <outlet property="wordListlabel" destination="NPE-hn-C2e" id="9kp-1f-AKQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kal-eS-xAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="229.59999999999999" y="71.514242878560722"/>
+        </scene>
+        <!--NoteListView-->
+        <scene sceneID="rrZ-Nb-I1n">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NoteListView" id="a7e-KW-vvh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgh-JX-O1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="-79"/>
+        </scene>
+        <!--WordEditView-->
+        <scene sceneID="2Fy-zE-JV6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WordEditView" id="rXp-xS-ClC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hw0-wE-geW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882" y="13"/>
+        </scene>
+        <!--WordView-->
+        <scene sceneID="tj6-ef-UW9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WordView" id="2td-zY-chA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2R-2x-TVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="898" y="227"/>
         </scene>
     </scenes>
 </document>

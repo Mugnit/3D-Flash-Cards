@@ -1,29 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Lu-x3-nkD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Word Add View Controller-->
+        <!--WordAddView-->
         <scene sceneID="2v3-Wk-riQ">
             <objects>
-                <viewController id="8Lu-x3-nkD" customClass="WordAddViewController" customModule="_D_Flash_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="WordAddView" id="8Lu-x3-nkD" customClass="WordAddViewController" customModule="_D_Flash_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6z9-CH-E1p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yJ-oi-5r8">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.55294117649999996" green="0.81176470590000005" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textShadowColor" red="0.55294117649999996" green="0.81176470590000005" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="単語追加" id="UeH-Qs-n4R">
+                                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="4c3-1O-qGg">
+                                            <connections>
+                                                <action selector="cancelButton:" destination="8Lu-x3-nkD" id="i7m-ku-5fw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYZ-Aa-8rx">
+                                <rect key="frame" x="7" y="384" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="dqw-qd-b4y"/>
+                                    <constraint firstAttribute="width" constant="160" id="ljW-Cc-dga"/>
+                                </constraints>
+                                <state key="normal" title="第二言語"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="llayer.maskToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="80"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ww-oV-Zte">
+                                <rect key="frame" x="207" y="384" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="MrX-yY-4mK"/>
+                                    <constraint firstAttribute="width" constant="160" id="Njy-79-v8I"/>
+                                </constraints>
+                                <state key="normal" title="第三言語"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="80"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKa-lN-IDn">
+                                <rect key="frame" x="87" y="639" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="BVF-Rv-WWS"/>
+                                    <constraint firstAttribute="height" constant="50" id="Q3s-HT-mkE"/>
+                                </constraints>
+                                <state key="normal" title="単語帳に追加"/>
+                                <connections>
+                                    <action selector="AddFlashCardButton:" destination="8Lu-x3-nkD" eventType="touchUpInside" id="L92-GV-sb5"/>
+                                    <segue destination="Hae-2K-YPA" kind="show" identifier="GoWEV" id="ual-yj-Gsh"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HtT-Q5-V9x">
+                                <rect key="frame" x="237" y="479" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HQ1-Ac-ZWN"/>
+                                    <constraint firstAttribute="width" constant="100" id="nQU-yF-W0f"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUA-F3-nWL">
+                                <rect key="frame" x="107" y="184" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="24C-rK-tPi"/>
+                                    <constraint firstAttribute="height" constant="160" id="rg2-JE-xra"/>
+                                </constraints>
+                                <state key="normal" title="第一言語"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="80"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uPx-vQ-KYR">
+                                <rect key="frame" x="137" y="279" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5Jw-h4-7qI"/>
+                                    <constraint firstAttribute="width" constant="100" id="fxh-Bs-ZPE"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fki-if-A1S">
+                                <rect key="frame" x="37" y="479" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="JnU-vX-z7r"/>
+                                    <constraint firstAttribute="height" constant="30" id="ZNt-AZ-cMr"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.55294117649999996" green="0.81176470590000005" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fki-if-A1S" firstAttribute="centerY" secondItem="UYZ-Aa-8rx" secondAttribute="centerY" constant="30" id="5mr-3E-GD6"/>
+                            <constraint firstItem="1yJ-oi-5r8" firstAttribute="top" secondItem="acX-sy-yfq" secondAttribute="top" id="6z3-8k-N3v"/>
+                            <constraint firstItem="UYZ-Aa-8rx" firstAttribute="centerY" secondItem="gUA-F3-nWL" secondAttribute="centerY" constant="200" id="9Wq-Dg-Rsg"/>
+                            <constraint firstItem="1yJ-oi-5r8" firstAttribute="leading" secondItem="6z9-CH-E1p" secondAttribute="leading" id="A0l-5M-ROk"/>
+                            <constraint firstItem="uPx-vQ-KYR" firstAttribute="centerY" secondItem="gUA-F3-nWL" secondAttribute="centerY" constant="30" id="D38-zU-Gtt"/>
+                            <constraint firstItem="xKa-lN-IDn" firstAttribute="centerX" secondItem="gUA-F3-nWL" secondAttribute="centerX" id="DWZ-oP-b5B"/>
+                            <constraint firstItem="uPx-vQ-KYR" firstAttribute="centerX" secondItem="gUA-F3-nWL" secondAttribute="centerX" id="IH2-6L-2hf"/>
+                            <constraint firstItem="HtT-Q5-V9x" firstAttribute="centerX" secondItem="8ww-oV-Zte" secondAttribute="centerX" id="Jtg-4J-550"/>
+                            <constraint firstItem="UYZ-Aa-8rx" firstAttribute="centerX" secondItem="gUA-F3-nWL" secondAttribute="centerX" constant="-100" id="L75-HG-dIV"/>
+                            <constraint firstItem="1yJ-oi-5r8" firstAttribute="centerX" secondItem="uPx-vQ-KYR" secondAttribute="centerX" id="MCb-al-6hr"/>
+                            <constraint firstItem="8ww-oV-Zte" firstAttribute="centerY" secondItem="gUA-F3-nWL" secondAttribute="centerY" constant="200" id="MH4-cX-eOp"/>
+                            <constraint firstItem="HtT-Q5-V9x" firstAttribute="centerY" secondItem="8ww-oV-Zte" secondAttribute="centerY" constant="30" id="QOI-DD-P1m"/>
+                            <constraint firstItem="8ww-oV-Zte" firstAttribute="centerX" secondItem="gUA-F3-nWL" secondAttribute="centerX" constant="100" id="Tcd-IE-QRm"/>
+                            <constraint firstItem="gUA-F3-nWL" firstAttribute="centerX" secondItem="6z9-CH-E1p" secondAttribute="centerX" id="e3s-y2-NwQ"/>
+                            <constraint firstItem="xKa-lN-IDn" firstAttribute="centerY" secondItem="gUA-F3-nWL" secondAttribute="centerY" constant="400" id="exR-Wn-eel"/>
+                            <constraint firstItem="Fki-if-A1S" firstAttribute="centerX" secondItem="UYZ-Aa-8rx" secondAttribute="centerX" id="lgo-HC-92t"/>
+                            <constraint firstItem="gUA-F3-nWL" firstAttribute="top" secondItem="1yJ-oi-5r8" secondAttribute="bottom" constant="120" id="nu9-QQ-WcU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="acX-sy-yfq"/>
                     </view>
+                    <connections>
+                        <outlet property="AddFlashCardButton" destination="xKa-lN-IDn" id="DGQ-DR-diq"/>
+                        <outlet property="FirstWordButton" destination="gUA-F3-nWL" id="Hik-nL-0BX"/>
+                        <outlet property="FirstWordText" destination="uPx-vQ-KYR" id="eYK-1S-4rN"/>
+                        <outlet property="SecondWordButton" destination="UYZ-Aa-8rx" id="xhH-8o-bb0"/>
+                        <outlet property="SecondWordText" destination="Fki-if-A1S" id="Oof-AE-Dss"/>
+                        <outlet property="ThirdWordButton" destination="8ww-oV-Zte" id="FK1-oj-7fN"/>
+                        <outlet property="ThirdWordText" destination="HtT-Q5-V9x" id="K7h-gK-cpP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u2p-Hk-dgt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92" y="150"/>
+            <point key="canvasLocation" x="92" y="149.77511244377811"/>
+        </scene>
+        <!--WordEditView-->
+        <scene sceneID="T2Q-Uq-1k6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WordEditView" id="Hae-2K-YPA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7S-Sp-pAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834" y="197"/>
         </scene>
     </scenes>
 </document>

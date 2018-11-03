@@ -167,14 +167,14 @@ class NoteListViewController: UIViewController, UITableViewDelegate, UITableView
     //Cellを選択した時に次の画面に選択したCellのwordListNameを引き継ぐ
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "WLnext"){
-            let indexPath = self.wLTableView.indexPathForSelectedRow
+            let indexPath = self.wLTableView.indexPathForSelectedRow //変数定義
             let indexPathsRow = wordListItems![indexPath!.row]
             let selectedText = indexPathsRow.wordListName
             let selectedId = indexPathsRow.id
             let noteMainVC: NoteMainViewController = (segue.destination as? NoteMainViewController)!
             print(noteMainVC.getText as Any)
-            noteMainVC.getText = selectedText
-            noteMainVC.getId = selectedId
+            noteMainVC.getText = selectedText //ここの部分を引き継ぐ
+            noteMainVC.getId = selectedId //ここの部分を引き継ぐ
             
         }
     }
