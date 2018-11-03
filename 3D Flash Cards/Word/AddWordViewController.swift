@@ -1,5 +1,5 @@
 //
-//  WordAddViewController.swift
+//  AddWordViewController.swift
 //  3D Flash Cards
 //
 //  Created by mat4645 on 2018/10/08.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WordAddViewController: UIViewController {
+class AddWordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

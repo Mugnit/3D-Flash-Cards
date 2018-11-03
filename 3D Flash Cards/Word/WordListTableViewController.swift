@@ -1,5 +1,5 @@
 //
-//  WordListViewController.swift
+//  WordListTableViewController.swift
 //  3D Flash Cards
 //
 //  Created by mat4645 on 2018/10/08.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WordListViewController: UIViewController {
+class WordListTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
