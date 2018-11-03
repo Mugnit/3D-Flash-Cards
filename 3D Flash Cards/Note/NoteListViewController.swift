@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 
 class NoteListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate {
+    
     //Realmの内容
     lazy var realm = try! Realm()
     var wordListItems: Results<RealmWordList>!

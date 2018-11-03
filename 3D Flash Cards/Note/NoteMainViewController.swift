@@ -10,6 +10,8 @@ import UIKit
 
 class NoteMainViewController: UIViewController {
     @IBOutlet weak var wordListlabel: UINavigationItem!
+    @IBOutlet weak var back: UIBarButtonItem!
+    
     //一つ前の画面から渡されたwordListName
     var getText: String?
     //一つ前の画面から渡されたid(ここでは使わずに次の画面に引き継ぐ)
@@ -19,6 +21,7 @@ class NoteMainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         wordListlabel.title = getText
+        self.back.title = "戻る"
 
         // Do any additional setup after loading the view.
     }
@@ -32,7 +35,15 @@ class NoteMainViewController: UIViewController {
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-
+    //Cellを選択した時に次の画面に選択したCellのwordListNameを引き継ぐ
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "moveToWordListTableView"){
+            let wordListTableVC: WordListTableViewController = (segue.destination as? WordListTableViewController)!
+            print(wordListTableVC.getText as Any)
+            wordListTableVC.getText = getText
+            wordListTableVC.getId = getId
+        }
+    }
     
     
     /*

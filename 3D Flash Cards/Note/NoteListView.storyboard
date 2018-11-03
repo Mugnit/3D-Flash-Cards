@@ -30,7 +30,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="単語帳一覧" id="2wE-QN-jvj">
-                                        <barButtonItem key="leftBarButtonItem" title="編集" style="done" id="2AO-OM-YPn">
+                                        <barButtonItem key="rightBarButtonItem" title="編集" style="done" id="2AO-OM-YPn">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="tapEditWL:" destination="7wI-Wd-hWj" id="0ph-ly-ouK"/>
@@ -106,8 +106,8 @@
         <!--NoteMainView-->
         <scene sceneID="vxa-4M-FmQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VOV-Ce-wka" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="NoteMainView" id="86I-vO-T2o" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VOV-Ce-wka" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="210" y="-44"/>
         </scene>

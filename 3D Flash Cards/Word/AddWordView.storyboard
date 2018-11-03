@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Word Add View Controller-->
+        <!--Add Word View Controller-->
         <scene sceneID="2v3-Wk-riQ">
             <objects>
-                <viewController id="8Lu-x3-nkD" customClass="WordAddViewController" customModule="_D_Flash_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8Lu-x3-nkD" customClass="AddWordViewController" customModule="_D_Flash_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6z9-CH-E1p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,63 +30,74 @@
                                     <navigationItem title="単語を追加" id="uMo-n2-c82">
                                         <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="NeF-XC-Cho">
                                             <connections>
-                                                <action selector="backButtonTaped:" destination="8Lu-x3-nkD" id="api-gZ-AkD"/>
+                                                <action selector="backButtonTaped:" destination="8Lu-x3-nkD" id="HS3-aE-PAC"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gIU-ao-lfU">
-                                <rect key="frame" x="47" y="93" width="280" height="30"/>
+                                <rect key="frame" x="47" y="132" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Mm-QP-NOa">
-                                <rect key="frame" x="47" y="203" width="280" height="30"/>
+                                <rect key="frame" x="47" y="242" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cUC-Zq-fKh">
-                                <rect key="frame" x="47" y="319" width="280" height="30"/>
+                                <rect key="frame" x="47" y="358" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="第一言語" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQp-Eq-CUW">
-                                <rect key="frame" x="152" y="64" width="70" height="21"/>
+                                <rect key="frame" x="152" y="103" width="70" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="第二言語" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ke2-ty-UDa">
-                                <rect key="frame" x="152" y="174" width="70" height="21"/>
+                                <rect key="frame" x="152" y="213" width="70" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="第三言語" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBP-Lx-DaI">
-                                <rect key="frame" x="152" y="290" width="70" height="21"/>
+                                <rect key="frame" x="152" y="329" width="70" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIY-eS-Mv4">
+                                <rect key="frame" x="126" y="537" width="123" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.76920527219772339" green="0.91219717264175415" blue="0.53418624401092529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="単語を追加する">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addWordButtonTaped:" destination="8Lu-x3-nkD" eventType="touchUpInside" id="w6Q-DY-Bmm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.55294117649999996" green="0.81176470590000005" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="acX-sy-yfq"/>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="NeF-XC-Cho" id="g1r-bX-KNa"/>
-                        <outlet property="firstWord" destination="gIU-ao-lfU" id="iUS-Bk-OKP"/>
-                        <outlet property="secondWord" destination="5Mm-QP-NOa" id="xfF-Pe-gq6"/>
-                        <outlet property="thirdWord" destination="cUC-Zq-fKh" id="27m-8g-9Ta"/>
+                        <outlet property="backButton" destination="NeF-XC-Cho" id="9AY-WN-TyK"/>
+                        <outlet property="firstWord" destination="gIU-ao-lfU" id="7fJ-7D-MZ0"/>
+                        <outlet property="secondWord" destination="5Mm-QP-NOa" id="dOm-s2-Op7"/>
+                        <outlet property="thirdWord" destination="cUC-Zq-fKh" id="ROe-nG-OFE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u2p-Hk-dgt" userLabel="First Responder" sceneMemberID="firstResponder"/>
